@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelMarket - Магазин игровых ресурсов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PixelMarket</h1>
+        <img src="https://placeholder.pics/svg/80x80/DEDEDE/6A1B9A/ПИКСЕЛЬ" alt="Логотип" class="logo">
+    </header>
+    
+    <nav>
+        <a href="#wow">World of Warcraft</a>
+        <a href="#dota">Dota 2</a>
+        <a href="#minecraft">Minecraft</a>
+    </nav>
+
+    <!-- Иконка корзины -->
+    <div class="cart-icon" id="cartIcon">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <!-- Сама корзина -->
+    <div class="cart-container" id="cartContainer">
+        <div class="cart-header">
+            <h2>Ваша корзина</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div id="cartItems">
+            <div class="empty-cart">Корзина пуста</div>
+        </div>
+        <div class="cart-total" id="cartTotal">
+            Итого: 0 руб.
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+    </div>
+    
+    <div class="container">
+        <section id="wow" class="game-section">
+            <h2>World of Warcraft</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="Золото WOW.img.webp">
+                    <h3>Золото WoW</h3>
+                    <p>Быстрая доставка золота на любой сервер</p>
+                    <div class="price">1000 золота - 50 руб.</div>
+                    <button class="add-to-cart" data-name="Золото WoW (1000)" data-price="50">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="Рандомный предмет.img.webp" alt="Эпический предмет">
+                    <h3>Рандомный предмет</h3>
+                    <p>Рандомный эпический предмет 200+ ilvl</p>
+                    <div class="price">300 руб.</div>
+                    <button class="add-to-cart" data-name="Рандомный предмет WoW" data-price="300">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="Помощь в прохождении.img.webp" alt="Прохождение подземелья">
+                    <h3>Прохождение подземелья</h3>
+                    <p>Помощь в прохождении любого подземелья на MСК</p>
+                    <div class="price">500 руб.</div>
+                    <button class="add-to-cart" data-name="Прохождение подземелья WoW" data-price="500">Купить</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="dota" class="game-section">
+            <h2>Dota 2</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="Любой сет .img.webp" alt="Сет предметов">
+                    <h3>Редкий сет предметов</h3>
+                    <p>Полный сет для любого героя(в наличии)</p>
+                    <div class="price">200 руб.</div>
+                    <button class="add-to-cart" data-name="Сет предметов Dota 2" data-price="200">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="Повышение поряды.img.webp" alt="Буст MMR">
+                    <h3>Буст MMR</h3>
+                    <p>Повышение Поряды на 5000 очков</p>
+                    <div class="price">1000 руб.</div>
+                    <button class="add-to-cart" data-name="Буст MMR Dota 2" data-price="1000">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="Аркана.img.webp" alt="Аркана">
+                    <h3>Аркана для героя</h3>
+                    <p>Любая аркана на выбор</p>
+                    <div class="price">2500 руб.</div>
+                    <button class="add-to-cart" data-name="Аркана Dota 2" data-price="2500">Купить</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="minecraft" class="game-section">
+            <h2>Minecraft</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="Стак алмазов.img.webp" alt="Алмазы">
+                    <h3>Алмазы</h3>
+                    <p>64 алмаза с доставкой на ваш сервер</p>
+                    <div class="price">100 руб.</div>
+                    <button class="add-to-cart" data-name="Алмазы Minecraft" data-price="100">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="постройка ДОма.img.webp" alt="Постройка">
+                    <h3>Готовая постройка</h3>
+                    <p>Постройка Дома </p>
+                    <div class="price">500 руб.</div>
+                    <button class="add-to-cart" data-name="Постройка Minecraft" data-price="500">Купить</button>
+                </div>
+                
+                <div class="item">
+                    <img src="maxresdefault.jpg" alt="Аккаунт">
+                    <h3>Премиум аккаунт</h3>
+                    <p>Официальный аккаунт Minecraft</p>
+                    <div class="price">1200 руб.</div>
+                    <button class="add-to-cart" data-name="Премиум аккаунт Minecraft" data-price="1200">Купить</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-categories">
+            <div class="category">
+                <h2>MMORPG</h2>
+                <p>Ресурсы для World of Warcraft, Albion и других MMORPG будут доступны в ближайшее время</p>
+            </div>
+            
+            <div class="category">
+                <h2>MOBA</h2>
+                <p>Предметы и услуги для Dota 2, </p>
+            </div>
+            
+            <div class="category">
+                <h2>Песочницы</h2>
+                <p>Ресурсы для Minecraft, </p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2025 PixelMarket - Магазин игровых ресурсов</p>
+        <p> Все товары являются виртуальными.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
